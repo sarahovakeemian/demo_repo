@@ -16,7 +16,7 @@ jobs:
         python -m pip install --upgrade databricks-cli
 
     - name: Remote update Prod Repo
-      run: databricks repos update --branch main --path "/Repos/sara.hovakeemian@databricks.com/demo_repo"
+      run: databricks repos update --branch main "/Repos/sara.hovakeemian@databricks.com/demo_repo"
       working-directory: .
       env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
