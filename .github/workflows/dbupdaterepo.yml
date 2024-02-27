@@ -7,7 +7,7 @@ jobs:
 
   steps:
     - name: Setup Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v2
       with:
         python-version: 3.13.0-alpha.4
 
@@ -16,7 +16,8 @@ jobs:
         python -m pip install --upgrade databricks-cli
 
     - name: Remote update Prod Repo
-      run: databricks repos update --branch main "/Repos/sara.hovakeemian@databricks.com/demo_repo"
       env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+        DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+      run: |
+        databricks repos update --branch main "/Repos/sara.hovakeemian@databricks.com/demo_repo"
