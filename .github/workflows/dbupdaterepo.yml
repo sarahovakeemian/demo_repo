@@ -20,4 +20,4 @@ jobs:
         DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
         DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
       run: |
-        databricks repos update --branch main --path /Repos/sara.hovakeemian@databricks.com/demo_repo
+        databricks repos update --branch main /Repos/sara.hovakeemian@databricks.com/demo_repo
