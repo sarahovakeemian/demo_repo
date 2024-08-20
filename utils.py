@@ -1,4 +1,4 @@
 
 
-def print_hello (x):
-  return (f'hello {x}, this is dev')
+def print_hello (greeting, name='Stranger'):
+  return (f'{greeting} {name}')
