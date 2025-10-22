@@ -8,3 +8,5 @@ testing 1.
 Testing SGC with Vanilla python. 
 
 Testing SGC with remote=True
+
+Testing SGC with remote=False
